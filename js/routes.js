@@ -9,14 +9,10 @@ angular.module('app.routes', [])
   $stateProvider
     
 
-      .state('tabsController.ajustes', {
+      .state('ajustes', {
     url: '/ajustes',
-    views: {
-      'tab1': {
-        templateUrl: 'templates/ajustes.html',
-        controller: 'ajustesCtrl'
-      }
-    }
+    templateUrl: 'templates/ajustes.html',
+    controller: 'ajustesCtrl'
   })
 
   .state('tabsController.treinos', {
@@ -39,10 +35,54 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('dicasDeEmagrecimento', {
+  .state('tabsController.suplementaO', {
+    url: '/suplemento',
+    views: {
+      'tab1': {
+        templateUrl: 'templates/suplementaO.html',
+        controller: 'suplementaOCtrl'
+      }
+    }
+  })
+
+  .state('tabsController.dicasDeEmagrecimento', {
     url: '/emagrecimento',
-    templateUrl: 'templates/dicasDeEmagrecimento.html',
-    controller: 'dicasDeEmagrecimentoCtrl'
+    views: {
+      'tab3': {
+        templateUrl: 'templates/dicasDeEmagrecimento.html',
+        controller: 'dicasDeEmagrecimentoCtrl'
+      }
+    }
+  })
+
+  .state('tabsController.termogNicos', {
+    url: '/termogenicos',
+    views: {
+      'tab1': {
+        templateUrl: 'templates/termogNicos.html',
+        controller: 'termogNicosCtrl'
+      }
+    }
+  })
+
+  .state('tabsController.bCAA', {
+    url: '/bcaa',
+    views: {
+      'tab1': {
+        templateUrl: 'templates/bCAA.html',
+        controller: 'bCAACtrl'
+      }
+    }
+  })
+
+  .state('tabsController.creatina', {
+    url: '/creatina',
+    views: {
+      'tab1': {
+        templateUrl: 'templates/creatina.html',
+        controller: 'creatinaCtrl'
+      }
+    }
   })
 
   .state('login', {
@@ -61,16 +101,24 @@ angular.module('app.routes', [])
     }
   })
 
-  .state('treinoModerado', {
+  .state('tabsController.treinoModerado', {
     url: '/treinoModerado',
-    templateUrl: 'templates/treinoModerado.html',
-    controller: 'treinoModeradoCtrl'
+    views: {
+      'tab2': {
+        templateUrl: 'templates/treinoModerado.html',
+        controller: 'treinoModeradoCtrl'
+      }
+    }
   })
 
-  .state('treinoLeve', {
+  .state('tabsController.treinoLeve', {
     url: '/treinoLeve',
-    templateUrl: 'templates/treinoLeve.html',
-    controller: 'treinoLeveCtrl'
+    views: {
+      'tab2': {
+        templateUrl: 'templates/treinoLeve.html',
+        controller: 'treinoLeveCtrl'
+      }
+    }
   })
 
   .state('tabsController', {
@@ -79,7 +127,13 @@ angular.module('app.routes', [])
     abstract:true
   })
 
-$urlRouterProvider.otherwise('/page1/ajustes')
+  .state('perfil', {
+    url: '/perfil',
+    templateUrl: 'templates/perfil.html',
+    controller: 'perfilCtrl'
+  })
+
+$urlRouterProvider.otherwise('/home')
 
 
 });

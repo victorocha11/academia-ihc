@@ -75,7 +75,24 @@
       <ion-header-bar class="bar-stable">
         <div class="title">Menu</div>
       </ion-header-bar>
-      <ion-content ng-controller="menuCtrl" padding="false" class="side-menu-left has-header "></ion-content>
+      <ion-content ng-controller="menuCtrl" padding="false" class="side-menu-left has-header ">
+        <ion-list id="menu-list2" data-componentid="list2">
+          <ion-item class="item-avatar" id="menu-list-item25" ui-sref="perfil()" menu-close="" data-componentid="list-item25">
+            <img src="img/SKGhzUrROuhMWXML8iEP_avatar.png">
+            <h2>Minha conta</h2>
+            <p>Olá, Usuário</p>
+          </ion-item>
+          <ion-item class="item-icon-right" id="menu-list-item23" href-inappbrowser="https://www.meu-imc.com/" data-componentid="list-item23">Calcular IMC
+            <i class="icon ion-calculator"></i>
+          </ion-item>
+          <ion-item class="item-icon-right" id="menu-list-item24" ui-sref="ajustes()" menu-close="" data-componentid="list-item24">Ajustes
+            <i class="icon ion-ios-cog-outline"></i>
+          </ion-item>
+          <ion-item class="item-icon-right" id="menu-list-item26" ui-sref="login()" menu-close="" data-componentid="list-item26">Sair
+            <i class="icon ion-android-exit"></i>
+          </ion-item>
+        </ion-list>
+      </ion-content>
     </ion-side-menu>
   </ion-side-menus>
 </div>
