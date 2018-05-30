@@ -143,7 +143,7 @@ angular.module('app.routes', [])
     controller: 'perfilCtrl'
   })
 
-$urlRouterProvider.otherwise('/page1/termogenicos')
+$urlRouterProvider.otherwise('/home')
 
 
 });
