@@ -55,6 +55,16 @@ angular.module('app.routes', [])
     }
   })
 
+  .state('tabsController.dicasParaGanhoDeMassaMuscular', {
+    url: '/Massa',
+    views: {
+      'tab3': {
+        templateUrl: 'templates/dicasParaGanhoDeMassaMuscular.html',
+        controller: 'dicasParaGanhoDeMassaMuscularCtrl'
+      }
+    }
+  })
+
   .state('tabsController.termogNicos', {
     url: '/termogenicos',
     views: {
@@ -133,7 +143,7 @@ angular.module('app.routes', [])
     controller: 'perfilCtrl'
   })
 
-$urlRouterProvider.otherwise('/home')
+$urlRouterProvider.otherwise('/page1/termogenicos')
 
 
 });
