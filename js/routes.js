@@ -143,6 +143,12 @@ angular.module('app.routes', [])
     controller: 'perfilCtrl'
   })
 
+  .state('calcularIMC', {
+    url: '/page17',
+    templateUrl: 'templates/calcularIMC.html',
+    controller: 'calcularIMCCtrl'
+  })
+
 $urlRouterProvider.otherwise('/home')
 
 
